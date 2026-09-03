@@ -2,6 +2,8 @@
 
 3D printable pegboard holders for Vonhaus metal pegboard
 
+![3D Printed pegboard box](imgs/box.png)
+
 ## Setup
 
 Create virtual environment:
