@@ -1,8 +1,14 @@
 # Pegboard Holders
 
-3D printable pegboard holders for Vonhaus metal pegboard
+3D printable pegboard holders for Vonhaus metal pegboard.
 
-![3D Printed pegboard box](imgs/box.png)
+Printed with: 0.20mm layer height, with normal support.
+
+![3D Printed pegboard box CAD design](imgs/box.png)
+
+![Box after printing](imgs/1.jpg)
+
+![Box attached to pegboard](imgs/2.jpg)
 
 ## Setup
 

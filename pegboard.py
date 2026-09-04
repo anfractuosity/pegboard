@@ -1,5 +1,6 @@
 from build123d import *
 from ocp_vscode import show
+import math
 
 sep_between_little_circle = 70.85 # Edge to Edge distance between small circle part of pegboard
 bigcircle_dia = 8.5               # Diameter of big circles on pegboard
@@ -28,6 +29,13 @@ with BuildPart() as holder:
 
     with Locations(top_face2):
         Cylinder(radius=bigcircle_dia / 2, height=2, align=(Align.CENTER, Align.CENTER, Align.MIN))
+
+    for cyl in [cyl1, cyl2]:
+        pln = Plane(cyl.faces().sort_by(Axis.Y)[0])
+        tri_pln = Plane(pln.origin + (0, 1.5, little_dia / 2), x_dir=(0,1,0), y_dir=(0,0,1))
+        with BuildSketch(tri_pln):
+            Triangle(a=2, b=6, c=math.sqrt(2**2 + 6**2))
+        extrude(amount=little_dia / 2, both=True)
 
 export_stl(holder.part, "box.stl")
 show(holder)
